@@ -1,0 +1,57 @@
+$borderRad: 6px;
+$fontColor: #444;
+$border: 3px solid #444;
+$activeBorder: 3px solid #55f;
+
+.wrk_lock {
+    &.wrk_lock_hiden {
+        display: none;
+    }
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 30%;
+
+    .wrk_lock_overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.8;
+    }
+
+    .wrk_lock_buttons {
+        width: 100%;
+        text-align: center;
+        position: relative;
+
+        .wrk_button {
+            background-color: white;
+            border: $border;
+            -webkit-border-radius: $borderRad;
+            -moz-border-radius: $borderRad;
+            border-radius: $borderRad;
+
+            font-size: 3em;
+            font-family: monospace;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            margin: 0 5px;
+            color: $fontColor;
+
+            &.wrk_button_pressed {
+                border: $activeBorder;
+                color: #999;
+                background-color: #ddd;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}

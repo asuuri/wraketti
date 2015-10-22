@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Launcher</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <script>
+            var locationPath = location.pathname.replace(/\/[^/]+$/, '') + 'js/';
+            var dojoConfig = {
+                packages: [
+                    { name: 'jquery', location: locationPath, main: 'jquery' },
+                    { name: 'bootstrap', location: locationPath, main: 'bootstrap' }
+                ]
+            };
+        </script>
+        <script src="js/dojo/dojo.js" data-dojo-config="async: true"></script>
+        <script>
+            require(['dojo/parser', 'wraketti/App', 'dojo/domReady!'], function(parser) {
+                parser.parse();
+            });
+        </script>
+    </head>
+    <body>
+        <div data-dojo-type="wraketti/App"></div>
+    </body>
+</html>

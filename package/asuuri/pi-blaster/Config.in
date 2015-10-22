@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PI_BLASTER
+    bool "pi-blaster"
+    depends on BR2_LINUX_KERNEL_DEFCONFIG = "bcm2709"
+    help
+        This project enables PWM on the GPIO pins you request
+        of a Raspberry Pi. The technique used is extremely 
+        efficient: does not use the CPU and gives very stable pulses.
+
+        https://github.com/sarfata/pi-blaster
