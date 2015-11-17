@@ -1,1 +1,3 @@
 rt2800usb
+ads7846_device verbose=2 cs=1 speed=2000000 model=7843 x_min=300 x_max=3800 y_min=700 y_max=3400 x_plate_ohms=60
+fbtft_device name=sainsmart32_spi rotate=90 speed=16000000 debug=$((1<<5)) gpios=reset:25,dc:24
